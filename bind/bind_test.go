@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/josexy/netstackgo/iface"
+	"github.com/TsukasaTsukimi/netstackgo/iface"
 )
 
 func TestBindToDeviceForTCP(t *testing.T) {

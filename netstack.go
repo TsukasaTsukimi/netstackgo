@@ -4,11 +4,6 @@ import (
 	"errors"
 	"net/netip"
 
-	"github.com/josexy/netstackgo/tun"
-	"github.com/josexy/netstackgo/tun/core"
-	"github.com/josexy/netstackgo/tun/core/device"
-	T "github.com/josexy/netstackgo/tun/core/device/tun"
-	"github.com/josexy/netstackgo/tun/core/option"
 	"gvisor.dev/gvisor/pkg/tcpip"
 	"gvisor.dev/gvisor/pkg/tcpip/network/ipv4"
 	"gvisor.dev/gvisor/pkg/tcpip/network/ipv6"
@@ -16,6 +11,11 @@ import (
 	"gvisor.dev/gvisor/pkg/tcpip/transport/icmp"
 	"gvisor.dev/gvisor/pkg/tcpip/transport/tcp"
 	"gvisor.dev/gvisor/pkg/tcpip/transport/udp"
+	"github.com/TsukasaTsukimi/netstackgo/tun"
+	"github.com/TsukasaTsukimi/netstackgo/tun/core"
+	"github.com/TsukasaTsukimi/netstackgo/tun/core/device"
+	T "github.com/TsukasaTsukimi/netstackgo/tun/core/device/tun"
+	"github.com/TsukasaTsukimi/netstackgo/tun/core/option"
 )
 
 var defaultCIDRRoutes = []string{

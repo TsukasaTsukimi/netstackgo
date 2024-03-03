@@ -7,8 +7,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/josexy/netstackgo"
-	"github.com/josexy/netstackgo/tun"
+	"github.com/TsukasaTsukimi/netstackgo"
+	"github.com/TsukasaTsukimi/netstackgo/tun"
 )
 
 type myHandler struct{}
@@ -22,7 +22,7 @@ func (*myHandler) HandleUDPConn(info *netstackgo.ConnTuple, conn net.PacketConn)
 	// do something...
 }
 
-func simple() {
+func main() {
 	nt := netstackgo.New(tun.TunConfig{
 		Name: "tun2",
 		Addr: "192.18.0.1/16",

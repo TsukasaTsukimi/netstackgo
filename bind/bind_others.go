@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/josexy/netstackgo/iface"
+	"github.com/TsukasaTsukimi/netstackgo/iface"
 )
 
 func lookupLocalAddr(ifaceName string, network string, dst netip.Addr, port uint16) (netip.AddrPort, error) {

@@ -2,7 +2,7 @@
 An easy-to-use netstack, wrapped by gvisor and wireguard-go, which supports macOS/Linux/Windows.
 
 ```shell
-go get -u github.com/josexy/netstackgo
+go get -u netstackgo
 ```
 
 # usage

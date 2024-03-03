@@ -5,7 +5,8 @@ import (
 	"net/netip"
 	"strconv"
 
-	"github.com/josexy/netstackgo/tun/core/adapter"
+	"github.com/TsukasaTsukimi/netstackgo/tun/core/adapter"
+
 	"gvisor.dev/gvisor/pkg/tcpip/stack"
 )
 
@@ -22,8 +23,8 @@ type ConnTuple struct {
 }
 
 func newConnTuple(id *stack.TransportEndpointID) *ConnTuple {
-	srcIP, _ := netip.AddrFromSlice([]byte(id.RemoteAddress))
-	dstIP, _ := netip.AddrFromSlice([]byte(id.LocalAddress))
+	srcIP, _ := netip.AddrFromSlice([]byte(id.RemoteAddress.AsSlice()))
+	dstIP, _ := netip.AddrFromSlice([]byte(id.LocalAddress.AsSlice()))
 
 	return &ConnTuple{
 		SrcIP:   srcIP,

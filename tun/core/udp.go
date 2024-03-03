@@ -1,8 +1,9 @@
 package core
 
 import (
-	"github.com/josexy/netstackgo/tun/core/adapter"
-	"github.com/josexy/netstackgo/tun/core/option"
+	"github.com/TsukasaTsukimi/netstackgo/tun/core/adapter"
+	"github.com/TsukasaTsukimi/netstackgo/tun/core/option"
+
 	"gvisor.dev/gvisor/pkg/tcpip/adapters/gonet"
 	"gvisor.dev/gvisor/pkg/tcpip/stack"
 	"gvisor.dev/gvisor/pkg/tcpip/transport/udp"
@@ -21,7 +22,7 @@ func WithUDPHandler(handle func(adapter.UDPConn)) option.Option {
 				return
 			}
 			conn := &udpConn{
-				UDPConn: gonet.NewUDPConn(s, &wq, ep),
+				UDPConn: gonet.NewUDPConn(&wq, ep),
 				id:      id,
 			}
 			handle(conn)

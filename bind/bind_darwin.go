@@ -5,8 +5,8 @@ import (
 	"net/netip"
 	"syscall"
 
-	"github.com/josexy/netstackgo/iface"
 	"golang.org/x/sys/unix"
+	"github.com/TsukasaTsukimi/netstackgo/iface"
 )
 
 type controlFn func(network, address string, c syscall.RawConn) error

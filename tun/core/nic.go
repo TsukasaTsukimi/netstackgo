@@ -3,9 +3,9 @@ package core
 import (
 	"fmt"
 
-	"github.com/josexy/netstackgo/tun/core/option"
 	"gvisor.dev/gvisor/pkg/tcpip"
 	"gvisor.dev/gvisor/pkg/tcpip/stack"
+	"github.com/TsukasaTsukimi/netstackgo/tun/core/option"
 )
 
 const (
